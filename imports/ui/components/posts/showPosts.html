@@ -1,0 +1,33 @@
+<template name="shownPosts">
+  <ul> {{#each posts}}
+	<div class="card">
+		<div class="card-content">
+			<span class="card-title activator grey-text text-darken-4">
+      {{title}}
+      <i class="material-icons right">more_vert</i>
+     </span>
+			<p>{{content}}</p>
+		</div>
+		<div class="card-reveal">
+			<span class="card-title grey-text text-darken-4">
+       Categories
+			 </span>
+			<!-- new code that allows us to add this post into a given category.-->
+			<div class="row">
+				<!-- Now we are going to loop over all available categories, that way the post has access to them.-->
+				{{#each p in categories}}
+				<div class="col s6 m6">
+					<!-- Display each category name, with a button that will allow us to add the post we are in,
+into the selected category. -->
+					<h4>{{p.Name}}</h4>
+					<button type="button" class="btn toggle-add-category" name="button" data-postid="{{p._id}}">add to here</button>
+				</div>
+				{{/each}}
+			</div>
+			<!-- End of new code. -->
+			<i class="material-icons right">close</i>
+		</div>
+	</div>
+	{{/each}}
+</ul>
+</template>

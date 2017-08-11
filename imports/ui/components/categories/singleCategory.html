@@ -1,0 +1,26 @@
+<template name="singleCategory">
+<nav class="nav-extended">
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Home</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/categories">categories</a></li>
+    </ul>
+  </div>
+  <div class="nav-content">
+    <span class="nav-title">Blog</span>
+  </div>
+</nav>
+<div class="container">
+  <h3>Posts in this category</h3>
+</div>
+ {{#each catPost}}
+<div class="container">
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{title}}</span>
+      <p>{{content}}</p>
+    </div>
+  </div>
+</div>
+{{/each}}
+</template>

@@ -1,0 +1,17 @@
+<template name="App_home">
+<nav class="nav-extended">
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Home</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/categories">categories</a></li>
+    </ul>
+  </div>
+  <div class="nav-content">
+    <span class="nav-title">Blog</span> {{> createPost}}
+  </div>
+</nav>
+// The container class is a class of materialize that makes you center your content with a space of 70% of the full width of the page. Great for layouts.
+<div class="container">
+  {{> shownPosts}}
+</div>
+</template>
